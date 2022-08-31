@@ -1,11 +1,12 @@
 import React from 'react';
 import './topNav.css';
+import {ReactComponent as LogoMark} from "../ImageResource/Rmark.svg";
 
 const TopNav = () => {
    return (
-       <div style={{display: "flex"}}>
+       <div className="navContainer">
            <nav className="navbar">
-               my nav
+               <LogoMark className="svgLogo"/>
            </nav>
        </div>
    );
