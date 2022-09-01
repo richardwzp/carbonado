@@ -30,7 +30,7 @@ const projectContent = [
   {
     title: "Raft Consensus Algorithm",
     description: raftDescription,
-    image: raft,
+    image: Dream,
     alt: "raft"
   }
 ]
