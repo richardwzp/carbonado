@@ -1,0 +1,19 @@
+
+.cardContainer {
+    max-width: 345px;
+    color: white;
+    background-color: black;
+    position: relative;
+}
+
+.contentContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 99px;
+}
+
+.innerText {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.8);
+}
