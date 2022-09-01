@@ -4,16 +4,18 @@ import MyName from "../../../component/heading/myName";
 import Greeting from "../../../component/heading/Greeting";
 import Zoom from 'react-reveal/Zoom';
 
-import logo from "../../../logo.svg";
+import greenMe from "../../../ImageResource/greenMe.png";
 
 
 const introPictureStyle = {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     gap: 20,
     }
 const textElementStyle = {
     width: "40%",
+    display: "flex",
+    alignItems: "center",
 }
 
 
@@ -22,7 +24,7 @@ const IntroSection = ({style, className}: any) => {
     const textElement = (
         <div style={textElementStyle}>
             <Fade top cascade>
-                <div>
+                <div style={{display: "flex", flexDirection: "column"}}>
                     <div>
                         <Greeting>Hello, this is</Greeting>
                         {name}
@@ -41,7 +43,7 @@ return (
         <div className="introPicture" style={introPictureStyle}>
             {textElement}
             <Zoom>
-                <img src={logo} alt="react logo" style={{width: '40%', border: "5px solid", borderColor: "white"}}/>
+                <img src={greenMe} alt="me" style={{maxHeight: '80vh', border: "0px solid", borderColor: "white"}}/>
             </Zoom>
         </div>
     </div>

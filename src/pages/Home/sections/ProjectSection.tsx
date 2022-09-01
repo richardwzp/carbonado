@@ -19,8 +19,8 @@ const ProjectSection = () => {
     return (
         <div className="projectSection" ref={ref}>
             {projectContent.map(({title, description, image, alt}, index) => (
-                inView? (<Fade bottom delay={index / 10}>
-                    <div className="projectCard " id={title}>
+                inView? (<Fade bottom delay={index * 60}>
+                    <div className="projectCard " key={title}>
                         <BaseCard
                         description={description}
                         imageAlt={alt}
