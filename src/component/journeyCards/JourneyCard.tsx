@@ -10,13 +10,12 @@ type JInput = {
 const JourneyCard = ({company, title, time, description}: JInput) => {
     return (
         <div className="journey-card-container">
-        <div className="company-name-container">{company}</div>
-
-        <div className="content-container">
             <div className="title-container">{title}</div>
-            <div className="time-container">{time}</div>
-            <div> {description} </div>
-        </div>
+            <div className="content-container">
+                <div className="company-name-container">{company}</div>
+                <div className="time-container">{time}</div>
+                <div> {description} </div>
+            </div>
        </div>
     );
 }

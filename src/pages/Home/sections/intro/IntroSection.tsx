@@ -1,10 +1,11 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import MyName from "../../../component/heading/myName";
-import Greeting from "../../../component/heading/Greeting";
+import MyName from "../../../../component/heading/myName";
+import Greeting from "../../../../component/heading/Greeting";
 import Zoom from 'react-reveal/Zoom';
 
-import greenMe from "../../../ImageResource/greenMe.png";
+import greenMe from "../../../../ImageResource/greenMe.png";
+import greenMe2 from "../../../../ImageResource/greenMe2.png";
 
 
 const introPictureStyle = {
@@ -43,7 +44,7 @@ return (
         <div className="introPicture" style={introPictureStyle}>
             {textElement}
             <Zoom>
-                <img src={greenMe} alt="me" style={{maxHeight: '80vh', border: "0px solid", borderColor: "white"}}/>
+                <img src={greenMe2} alt="me" style={{maxHeight: '80vh', border: "0px solid", borderColor: "white"}}/>
             </Zoom>
         </div>
     </div>

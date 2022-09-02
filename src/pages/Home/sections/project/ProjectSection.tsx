@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import BaseCard from "../../../component/projectcards/BaseCard";
+import BaseCard from "../../../../component/projectcards/BaseCard";
 import projectContent from "./projectContent";
 import './projectSection.css';
 import Fade from "react-reveal/Fade";

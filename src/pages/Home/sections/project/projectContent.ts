@@ -1,5 +1,5 @@
-import Dream from "./../../../ImageResource/Dream.png";
-import raft from "./../../../ImageResource/raft.jpeg";
+import Dream from "../../../../ImageResource/Dream.png";
+import raft from "../../../../ImageResource/raft.jpeg";
 
 const sandmanDescription=  "A python implementation of a moderation bot backed by a mySQL database. " +
     "The bot primary serves as a moderator tools for the community CS server, while providing " +
