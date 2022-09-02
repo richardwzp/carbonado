@@ -2,6 +2,7 @@ import React from 'react';
 import IntroSection from "./sections/intro/IntroSection";
 import ProjectSection from "./sections/project/ProjectSection";
 import JourneySection from "./sections/journey/JourneySection";
+import InterestSection from "./sections/interest/InterestSection";
 import Divider from "@mui/material/Divider";
 
 import './home.css';
@@ -24,6 +25,7 @@ const Home = () => {
             {divider}
             <ProjectSection/>
             {divider}
+            <InterestSection/>
 
 
 

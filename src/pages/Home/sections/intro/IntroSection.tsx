@@ -4,7 +4,7 @@ import MyName from "../../../../component/heading/myName";
 import Greeting from "../../../../component/heading/Greeting";
 import Zoom from 'react-reveal/Zoom';
 
-import greenMe from "../../../../ImageResource/greenMe.png";
+// import greenMe from "../../../../ImageResource/greenMe.png";
 import greenMe2 from "../../../../ImageResource/greenMe2.png";
 
 
