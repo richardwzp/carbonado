@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, {useEffect} from 'react';
 import BaseCard from "../../../../component/projectcards/BaseCard";
 import projectContent from "./projectContent";
 import './projectSection.css';
 import Fade from "react-reveal/Fade";
 import {useInView} from "react-intersection-observer";
-import {useEffect} from "react";
+import RepoCard from "react-repo-card";
 
-const ProjectSection = () => {
+const Appear = ({override}: any) => {
     const { ref, inView } = useInView({
         /* Optional options */
         triggerOnce: true,
@@ -16,21 +16,76 @@ const ProjectSection = () => {
         //do something here when inView is true
     }, [inView])
 
+    const ele = projectContent.map(({title, description, children}, index) => (
+        <Fade bottom delay={0}>
+            <div className="projectCard " key={title}>
+                <BaseCard
+                    description={description}
+                    // imageAlt={alt}
+                    // image={image}
+                    title={title}
+                    minHeight={400}>
+                    {children}
+                </BaseCard>
+            </div>
+        </Fade>)
+    );
     return (
-        <div className="projectSection" ref={ref}>
-            {projectContent.map(({title, description, image, alt}, index) => (
-                inView? (<Fade bottom delay={index * 60}>
-                    <div className="projectCard " key={title}>
-                        <BaseCard
-                        description={description}
-                        imageAlt={alt}
-                        image={image}
-                        title={title}
-                        minHeight={400}/>
-                    </div>
-                </Fade>) : null
-                )
-            )}
+        <div style={{display: "flex", flexDirection: "column"}} ref={ref}>
+            {inView? ele : null}
+        </div>);
+}
+
+const repos = {
+    name: "richardwzp",
+    repos: [
+        "sandman_v2",
+        "sandman-demo",
+        "dotfiles",
+        "python-database-project",
+        "warbler-discord-bot",
+        "racket-practice",
+    ]
+}
+const style = { width: "300px", display: "flex", padding: 5};
+type createRepoProp = {name: string, repo: string, index: number};
+const CreateRepo: React.FC<createRepoProp> = ({name, repo, index}) => {
+    return (
+        <div style={style}>
+            <Fade bottom delay={index * 60}>
+                <RepoCard dark username={name} repository={repo}/>
+            </Fade>
+        </div>
+    );
+}
+const GithubRepo = () => {
+    const { ref, inView } = useInView({
+        /* Optional options */
+        triggerOnce: true,
+        threshold: 0,
+    });
+    useEffect(()=>{
+        //do something here when inView is true
+    }, [inView])
+    return <div ref={ref}>
+            {inView ? (
+                <div className="projectSection"
+                     style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
+                    {repos.repos.map((na, index) =>
+                        <CreateRepo name={repos.name} repo={na} index={index}/>)}
+                </div>) : null}
+
+            </div>;
+}
+
+
+const ProjectSection = () => {
+    return (
+
+           <div style={{display: "flex", flexDirection: "column"}}>
+               <GithubRepo/>
+               <div style={{marginTop: "90px"}}></div>
+               <Appear override={repos.repos.length}/>
         </div>
     );
 }

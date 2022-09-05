@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
+import { Box } from '@mui/material'
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,38 +8,53 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './baseCard.css';
 
-const BaseCard = ({title, description, image, imageAlt, minHeight}:
-                      {title: string, description: string, image: any, imageAlt: string, minHeight?: number}) => {
+const BaseCard = ({title, description, image, imageAlt, minHeight, children}:
+                      {
+                          title: string,
+                          description: string,
+                          image?: any,
+                          imageAlt?: string,
+                          minHeight?: number,
+                          children?: any}) => {
     const style: any = {
+    }
+    if (image === undefined) {
+        style.backgroundColor = "rgb(14, 17, 22)";
+        style.borderStyle = "solid";
+        style.borderColor = "white";
+        style.border = "1px solid rgb(49, 54, 60)";
     }
     if (minHeight) {
         style.minHeight = minHeight;
     }
+    // overriding contentStyle
+    const contentStyle = {}
 
     return (
-        <Card className="cardContainer" style={style}>
-            <CardMedia
+        <div className="cardContainer" style={style}>
+            {
+                (image === undefined || imageAlt === undefined) ?
+                    <div></div> :
+                    (<CardMedia
                 component="img"
                 image={image}
                 alt={imageAlt}
                 style={style}
-            />
+            />)
+            }
 
-            <div className="contentContainer">
-                <CardContent className="innerText">
+            <div className="contentContainer" style={contentStyle}>
+                <div className={image === undefined ? "" : "innerText"}>
                     <Typography gutterBottom variant="h5" component="div" color={"common.white"}>
                         {title}
                     </Typography>
                     <Typography variant="body2" color="common.white">
                         {description}
                     </Typography>
-                </CardContent>
-                <CardActions>
-                    {/* <Button size="small">Share</Button> */}
-                    <Button size="small" style={{color: "#FFFFFF"}}>Learn More</Button>
-                </CardActions>
+                </div>
+                {children}
             </div>
-        </Card>
+        </div>
     );
 }
 

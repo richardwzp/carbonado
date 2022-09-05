@@ -11,7 +11,7 @@ import scala from './../../../../ImageResource/scala.svg';
 
 import Fade from "react-reveal";
 
-const CreateCircle = ({size="4em", image, alt}: any) => {
+const CreateCircle = ({size="4em", image, alt, imageSize}: any) => {
     return (
         <div style={{position: "relative", width: size, height: size}}>
             <div style={{
@@ -26,7 +26,7 @@ const CreateCircle = ({size="4em", image, alt}: any) => {
             top: 0,
             left: 0,}}></div>
             <img style={{
-                        width: "70%",
+                        width: imageSize,
                         position: "absolute",
                         top: "50%",
                         left: "50%",
@@ -36,7 +36,7 @@ const CreateCircle = ({size="4em", image, alt}: any) => {
     );
 }
 
-const Generate = ({pname, link, image}: any) => {
+const Generate = ({pname, link, image, imageSize}: any) => {
    return (
        <div>
             {/*<a href="https://icons8.com/icon/13441/python"></a>*/}
@@ -50,14 +50,15 @@ const Generate = ({pname, link, image}: any) => {
                    flexDirection: "row",
                    alignItems: "center"}}>
                     <Fade>
-                        <CreateCircle size="3em" image={image} alt={pname}/>
+                        <CreateCircle size="3em" image={image} alt={pname} imageSize={imageSize}/>
                     </Fade>
                 <div>{pname}</div>
             </a>
         </div>);
 }
 
-const generate = (a: string, b: string, c: string) => <Generate pname={a} link={b} image={c}/>
+const generate = (a: string, b: string, c: string, imageSize="70%") =>
+    <Generate pname={a} link={b} image={c} imageSize={imageSize}/>
 
 const regularPlContent = [
     generate("Python", "https://www.python.org/", python),

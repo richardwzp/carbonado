@@ -21,9 +21,9 @@ const Home = () => {
         <div className="scrolling-container">
             <IntroSection className="intro-section-container" style={introStyle}/>
             {divider}
-            <JourneySection/>
-            {divider}
             <ProjectSection/>
+            {divider}
+            <JourneySection/>
             {divider}
             <InterestSection/>
 
