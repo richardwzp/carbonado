@@ -24,7 +24,7 @@ const Appear = ({override}: any) => {
                     // imageAlt={alt}
                     // image={image}
                     title={title}
-                    minHeight={400}>
+                    minHeight={0}>
                     {children}
                 </BaseCard>
             </div>
@@ -83,9 +83,9 @@ const ProjectSection = () => {
     return (
 
            <div style={{display: "flex", flexDirection: "column"}}>
-               <GithubRepo/>
-               <div style={{marginTop: "90px"}}></div>
                <Appear override={repos.repos.length}/>
+               <div style={{marginTop: "90px"}}></div>
+               <GithubRepo/>
         </div>
     );
 }

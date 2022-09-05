@@ -25,7 +25,7 @@ const Home = () => {
             {divider}
             <JourneySection/>
             {divider}
-            <InterestSection/>
+            {/*<InterestSection/>*/}
 
 
 

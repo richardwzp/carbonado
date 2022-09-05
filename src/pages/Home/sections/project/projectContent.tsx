@@ -3,6 +3,9 @@ import top from "../../../../ImageResource/sandmanClassTop.png";
 import bot from "../../../../ImageResource/sandmanClassBot.png";
 import SeeFading from "../../../../component/common/SeeFading";
 import {Box} from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import java from "../../../../ImageResource/java.svg";
+import TinyButton from "../../../../component/common/tinyButton";
 
 const sandmanDescription=  "A python implementation of a moderation bot backed by a mySQL database. " +
     "The bot primary serves as a moderator tools for the community CS server, while providing " +
@@ -31,6 +34,7 @@ const imgDivStyle = {
   border: "1px solid white",
   overflow: "hidden",
 }
+
 const gen = (name: string, img: string) =>
     (<SeeFading>
       <Box style={imgDivStyle}>
@@ -43,17 +47,34 @@ const projectContent = [
     title: "Sandman Discord Bot",
     description: sandmanDescription,
     children: (
-        <div style={{display: "flex", flexDirection: "row", alignItems: "center", flexWrap: "wrap"}}>
-          {gen("top", top)}
-          {gen("bot", bot)}
-          {gen("star", star)}
+        <div>
+            <TinyButton
+                link={"https://github.com/richardwzp/sandman-demo"}
+                icon={<GitHubIcon/>}
+                text={"Repo Link"}/>
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", flexWrap: "wrap"}}>
+            {gen("top", top)}
+            {gen("bot", bot)}
+            {gen("star", star)}
+          </div>
         </div>
     ),
   },
   {
     title: "GUI Image processor",
     description: imageDescription,
-    children: null,
+    children: (
+        <div>
+            <TinyButton
+                style={{
+                    color: "rgb(255, 186, 112)",
+                    backgroundColor: "rgb(24, 27, 36)",
+                }}
+                link={"photoshop.jar"}
+                icon={<img src={java} style={{width: "24px"}} alt="java"/>}
+                text={"jar file"}/>
+        </div>
+    ),
   },
   {
     title: "Raft Consensus Algorithm",
