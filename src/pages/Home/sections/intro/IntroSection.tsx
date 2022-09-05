@@ -14,7 +14,7 @@ const introPictureStyle = {
     gap: 20,
     }
 const textElementStyle = {
-    width: "40%",
+    width: "42%",
     display: "flex",
     alignItems: "center",
 }
@@ -26,13 +26,14 @@ const IntroSection = ({style, className}: any) => {
         <div style={textElementStyle}>
             <Fade top cascade>
                 <div style={{display: "flex", flexDirection: "column"}}>
-                    <div>
+                    <div style={{width: "100%"}}>
                         <Greeting>Hello, this is</Greeting>
                         {name}
                     </div>
-                    <div style={{width: "80%", lineHeight: 2}}>
-                        I'm a Rising Junior at Northeastern University.
-                        Currently working as a DevOp intern at WoltersKluwer CloudSRE team.
+                    <div style={{width: "95%", lineHeight: 2}}>
+                        I am a rising junior at Northeastern University studying Computer Science with a software concentration.
+                        <br/>
+                        A Programming language enthusiast, avid D&D player/DM, fantasy artist, comic-book fan, and cinephile.
                     </div>
                 </div>
             </Fade>
