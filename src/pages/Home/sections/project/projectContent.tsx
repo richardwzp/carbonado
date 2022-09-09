@@ -49,7 +49,7 @@ const projectContent = [
     children: (
         <div>
             <TinyButton
-                link={"https://github.com/richardwzp/sandman-demo"}
+                link={"https://github.com/richardwzp/teleute"}
                 icon={<GitHubIcon/>}
                 text={"Repo Link"}/>
           <div style={{display: "flex", flexDirection: "row", alignItems: "center", flexWrap: "wrap"}}>

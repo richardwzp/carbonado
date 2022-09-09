@@ -39,7 +39,7 @@ const Appear = ({override}: any) => {
 const repos = {
     name: "richardwzp",
     repos: [
-        "sandman_v2",
+        "teleute",
         "sandman-demo",
         "dotfiles",
         "python-database-project",
