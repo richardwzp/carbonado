@@ -22,7 +22,7 @@ import Home from './pages/Home/home';
 //<NavBar />
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <>
         <TopNav/>
         <Routes>

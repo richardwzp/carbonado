@@ -2,6 +2,7 @@
   "name": "example-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://richardwzp.github.io/carbonado",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
