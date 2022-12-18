@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/carbonado/static/css/main.3df6ac88.css",
+    "main.js": "/carbonado/static/js/main.60a22f78.js",
+    "static/js/787.bc5e507e.chunk.js": "/carbonado/static/js/787.bc5e507e.chunk.js",
+    "static/media/greenMe2.png": "/carbonado/static/media/greenMe2.9ed2cc45b182e803a475.png",
+    "static/media/sandmanClassTop.png": "/carbonado/static/media/sandmanClassTop.a60bcf1c0f46a5721ec0.png",
+    "static/media/sandman_star.png": "/carbonado/static/media/sandman_star.2fdc9423004462ff2d88.png",
+    "static/media/sandmanClassBot.png": "/carbonado/static/media/sandmanClassBot.2291cc95ded0a444d475.png",
+    "static/media/Rmark.svg": "/carbonado/static/media/Rmark.20a3550cdb90a21a1667bda506c2e090.svg",
+    "static/media/abril-fatface-all-400-normal.woff": "/carbonado/static/media/abril-fatface-all-400-normal.327d8bf30c4299561107.woff",
+    "static/media/abril-fatface-latin-400-normal.woff2": "/carbonado/static/media/abril-fatface-latin-400-normal.e28de833ee7ea7791eba.woff2",
+    "static/media/abril-fatface-latin-ext-400-normal.woff2": "/carbonado/static/media/abril-fatface-latin-ext-400-normal.0aba6cfe7a9ae0da1e20.woff2",
+    "static/media/java.svg": "/carbonado/static/media/java.3c5854fce4aa30ad19d569c45d5ce874.svg",
+    "index.html": "/carbonado/index.html",
+    "main.3df6ac88.css.map": "/carbonado/static/css/main.3df6ac88.css.map",
+    "main.60a22f78.js.map": "/carbonado/static/js/main.60a22f78.js.map",
+    "787.bc5e507e.chunk.js.map": "/carbonado/static/js/787.bc5e507e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3df6ac88.css",
+    "static/js/main.60a22f78.js"
+  ]
+}
